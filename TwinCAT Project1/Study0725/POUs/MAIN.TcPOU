@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.10">
+  <POU Name="MAIN" Id="{9b790b26-15d0-458b-8eed-61ba45227661}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	BOOL1 AT %MX0.0:BOOL;
+	ib: INT;
+	Tool1: TON;
+	stat: BOOL;
+	tt: BOOL;
+	ss: BOOL;
+	CTU1:CTU;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[ib:=1;
+Tool1(IN:= ss, PT:=t#3s , Q=> , ET=> );
+CTU1(
+	CU:= , 
+	RESET:= , 
+	PV:= , 
+	Q=> , 
+	CV=> );
+
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="30" Count="4" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
